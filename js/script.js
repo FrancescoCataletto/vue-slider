@@ -33,6 +33,8 @@ const app = new Vue({
 
         activeSlide: 0,
 
+        isPaused : false
+
     },
 
     methods: {
@@ -52,9 +54,17 @@ const app = new Vue({
             }
         },
 
+        startAndStop(){
+            return this.isPaused = !this.isPaused
+        },
+
         sliding(){
             setInterval(() => {
-                this.counterUp();
+                if(this.isPaused === false){
+                    this.counterUp();
+                }else{
+                    clearInterval(setInterval())
+                }
             }, 3000)
         }
     },

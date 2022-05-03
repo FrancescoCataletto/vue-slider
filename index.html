@@ -26,7 +26,9 @@
                     </div>
                 </div>
 
-                <div class="thumbs" >
+                <div class="thumbs" 
+                     @mouseover="startAndStop()"
+                     @mouseleave="startAndStop()">
                     <div @click="counterDown" class="prev"></div>
                     <div @click="counterUp" class="next"></div>
                     <div v-for="(slide, index) in slides" 
