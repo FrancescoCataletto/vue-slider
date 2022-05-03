@@ -53,6 +53,12 @@ const app = new Vue({
                 this.activeSlide = this.slides.length -1;
             }
         }
+    },
+
+    mounted(){
+        setInterval(() => {
+            this.counterUp();
+        }, 3000)
     }
 }) 
 
