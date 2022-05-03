@@ -29,7 +29,9 @@
                 <div class="thumbs">
                     <div @click="counterDown" class="prev"></div>
                     <div @click="counterUp" class="next"></div>
-                    <div v-for="(slide, index) in slides" class="thumb">
+                    <div v-for="(slide, index) in slides" 
+                         class="thumb"
+                         :class="{active : index === activeSlide}">
                         <img :src="slide.image" :alt="slide.text"/>
                     </div>
                 </div>

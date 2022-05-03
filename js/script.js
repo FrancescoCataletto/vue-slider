@@ -31,6 +31,8 @@ const app = new Vue({
             }
         ],
 
+        active: "active",
+
         activeSlide: 0
         
     },
