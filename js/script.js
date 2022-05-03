@@ -62,6 +62,6 @@ const app = new Vue({
             this.counterUp();
         }, 3000)
     }
-}) 
+})  
 
 
