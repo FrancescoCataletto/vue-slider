@@ -32,6 +32,22 @@ const app = new Vue({
         ],
 
         counter: 0
+    },
+
+    methods: {
+        counterUp(){
+            if(this.counter > slides.length -1){
+                this.counter = 0;
+            }
+            this.counter++
+        },
+
+        counterDown(){
+            if(this.counter < 0){
+                this.counter = slides.length -1;
+            }
+            this.counter--
+        }
     }
 }) 
 
