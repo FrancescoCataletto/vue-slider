@@ -37,17 +37,19 @@ const app = new Vue({
 
     methods: {
         counterUp(){
+            this.counter++;
+            
             if(this.counter > this.slides.length -1){
                 this.counter = 0;
             }
-            this.counter++
         },
 
         counterDown(){
+            this.counter--;
+
             if(this.counter < 0){
                 this.counter = this.slides.length -1;
             }
-            this.counter--
         }
     }
 }) 
