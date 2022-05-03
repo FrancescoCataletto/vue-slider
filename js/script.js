@@ -31,24 +31,24 @@ const app = new Vue({
             }
         ],
 
-        counter: 0
+        activeSlide: 0
         
     },
 
     methods: {
         counterUp(){
-            this.counter++;
-            
-            if(this.counter > this.slides.length -1){
-                this.counter = 0;
+            this.activeSlide++;
+
+            if(this.activeSlide > this.slides.length -1){
+                this.activeSlide = 0;
             }
         },
 
         counterDown(){
-            this.counter--;
+            this.activeSlide--;
 
-            if(this.counter < 0){
-                this.counter = this.slides.length -1;
+            if(this.activeSlide < 0){
+                this.activeSlide = this.slides.length -1;
             }
         }
     }
