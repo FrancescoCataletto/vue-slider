@@ -52,15 +52,15 @@ const app = new Vue({
             }
         },
 
-        stop(){
-            clearInterval(setInterval)
+        sliding(){
+            setInterval(() => {
+                this.counterUp();
+            }, 3000)
         }
     },
 
     mounted(){
-        setInterval(() => {
-            this.counterUp();
-        }, 3000)
+        this.sliding()
     }
 })  
 
