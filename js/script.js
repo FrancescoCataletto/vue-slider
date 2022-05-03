@@ -31,10 +31,8 @@ const app = new Vue({
             }
         ],
 
-        active: "active",
+        activeSlide: 0,
 
-        activeSlide: 0
-        
     },
 
     methods: {
@@ -52,6 +50,10 @@ const app = new Vue({
             if(this.activeSlide < 0){
                 this.activeSlide = this.slides.length -1;
             }
+        },
+
+        stop(){
+            clearInterval(setInterval)
         }
     },
 
